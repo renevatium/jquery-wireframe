@@ -8,8 +8,8 @@ Built this back in September 2013. For the lulz.
 
 Just open the index.html file in a browser.
 
-Hold left click to rotate
-Hold right click to transform (move).
+- Hold left click to rotate
+- Hold right click to transform (move).
 
 ### TODO
 
