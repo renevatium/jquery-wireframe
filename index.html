@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>jQuery Wireframe</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="jQuery Wireframe" />
+    <meta name="description" content="jQuery Wireframe Plugin" />
+    <meta name="keywords" content="jquery, jqueryui, wireframe, 3d wireframe, papervision, jquery 3d, goojs" />
+    <meta name="language" content="en" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.wireframe.src.js"></script>
+    <script type="text/javascript">
+      function render(){
+        $("#wireframe").wireframe({
+          url: 'models/'+$("#url").val()+'.off',
+          zoom: $("#zoom").val(),
+          fps: $("#fps").val(),
+          fill: $("#fill").val(),
+          stroke: $("#stroke").val(),
+          line: $("#line").val()
+        });
+      }
+      jQuery(document).ready(function($){
+        $("#menu").find('select,input').change(function(e){
+          e.preventDefault();
+          if($("#url").val()){
+            render();
+          }
+        });
+      });
+    </script>
+    <style type="text/css">
+      body { font-family:Calibri,Arial,sans-serif;margin:0;padding:0; }
+      #menu { position:fixed;z-index:2;top:10px;left:10px;width:200px; }
+      #menu h1 { margin:0 0 10px 0;padding:0; }
+      #menu ul { list-style:none;margin:0;padding:0; }
+      #wireframe { display:block;position:absolute;z-index:1;top:0;bottom:0;left:0;right:0;height:100%;width:100%; }
+      label { display:block; }
+      select { width: 195px; }
+      input { width:190px; }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <h1>jQuery Wireframe</h1>
+      <ul>
+        <li>
+          <label>Model</label>
+          <select id="url">
+            <option value="">Please Select</option>
+            <optgroup label="Complex">
+              <option value="complex/apple">apple</option>
+              <option value="complex/dragon">dragon</option>
+              <option value="complex/formula">formula</option>
+              <option value="complex/goblet">goblet</option>
+              <option value="complex/head">head</option>
+              <option value="complex/king">king</option>
+              <option value="complex/klingon">klingon</option>
+              <option value="complex/pear">pear</option>
+              <option value="complex/plane">plane</option>
+              <option value="complex/seashell">seashell</option>
+              <option value="complex/spacestation">spacestation</option>
+              <option value="complex/sword">sword</option>
+              <option value="complex/teapot">teapot</option>
+              <option value="complex/helix">helix</option>
+            </optgroup>
+            <optgroup label="Geometric">
+              <option value="geometric/boxcube">boxcube</option>
+              <option value="geometric/cone">cone</option>
+              <option value="geometric/cuboctahedron">cuboctahedron</option>
+              <option value="geometric/epcot">epcot</option>
+              <option value="geometric/icosahedron">icosahedron</option>
+              <option value="geometric/octahedron">octahedron</option>
+              <option value="geometric/octtorus">octtorus</option>
+              <option value="geometric/rhombicosidodecahedron">rhombicosidodecahedron</option>
+              <option value="geometric/rhombicubeoctahedron">rhombicubeoctahedron</option>
+              <option value="geometric/sphere">sphere</option>
+              <option value="geometric/truncicosahedron">truncicosahedron</option>
+            </optgroup>
+          </select>
+        </li>
+        <li>
+          <label>Zoom</label>
+          <input type="text" id="zoom" value="10000" />
+        </li>
+        <li>
+          <label>FPS</label>
+          <input type="text" id="fps" value="37" />
+        </li>
+        <li>
+          <label>Stroke Style</label>
+          <input type="text" id="stroke" value="rgba(0, 0, 0, 1)" />
+        </li>
+        <li>
+          <label>Fill Style</label>
+          <input type="text" id="fill" value="rgba(60, 60, 60, 0.1)" />
+        </li>
+        <li>
+          <label>Line Width</label>
+          <input type="text" id="line" value="0.2" />
+        </li>
+      </ul>
+    </div>
+    <canvas id="wireframe"></canvas>
+  </body>
+</html>
