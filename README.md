@@ -13,8 +13,8 @@ Just open the index.html file in a browser.
 
 ### TODO
 
-Add more options
-Fix responsiveness
-Improve design
-Add webpack
-Color fragments
+- Add more options
+- Fix responsiveness
+- Improve design
+- Add webpack
+- Color fragments
