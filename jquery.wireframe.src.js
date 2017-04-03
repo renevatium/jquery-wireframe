@@ -54,10 +54,8 @@
     })
 
     $(window).on('resize.wireframe', function(e){
-      var diff = { x: self.resolution.w-self.element.width(), y: self.resolution.h-self.element.height() }
-      self.canvas.clearRect(0, 0, self.resolution.w, self.resolution.h);
-      self.origin = { x: self.origin.x-diff.x, y:self.origin.y-diff.y };
       self.resolution = { w: self.element.width(), h: self.element.height() };
+      self.origin = { x: self.resolution.w/2, y: self.resolution.h/2 };
       self.element.get(0).width = self.resolution.w;
       self.element.get(0).height = self.resolution.h;
     });

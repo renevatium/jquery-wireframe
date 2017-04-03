@@ -1,0 +1,26 @@
+{
+  "name": "jquery-wireframe",
+  "version": "0.1.0",
+  "description": "Renders OFF 3D models to a 2D canvas using projection.",
+  "main": "jquery.wireframe.src.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renevatium/jquery-wireframe.git"
+  },
+  "keywords": [
+    "jquery",
+    "wireframe",
+    "3d",
+    "webgl"
+  ],
+  "author": "Renevatium",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renevatium/jquery-wireframe/issues"
+  },
+  "homepage": "https://github.com/renevatium/jquery-wireframe#readme"
+}
