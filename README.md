@@ -6,7 +6,9 @@ Built this back in 2013. For the lulz.
 
 ### Running
 
-Just open the index.html file in a browser.
+```
+npm start
+```
 
 - Hold left click to rotate
 - Hold right click to transform (move).
@@ -16,7 +18,7 @@ Just open the index.html file in a browser.
 
 - Add more options
 - Fix responsiveness
-- Improve design
+- Improve demo UI
 - Add webpack
 - Color fragments
 - Add more filetypes
